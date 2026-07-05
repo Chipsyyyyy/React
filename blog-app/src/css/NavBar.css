@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh;
+}
+
+.logo-icon{
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.logo{
+    size: 1vh;
+}
+
+.links{
+    display:flex;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+
+.nav-links,
+.nav-links:visited,
+.nav-links:hover,
+.nav-links:active {
+    color: inherit;
+    text-decoration: none;
+}
