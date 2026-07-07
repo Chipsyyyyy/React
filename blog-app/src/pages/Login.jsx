@@ -1,13 +1,30 @@
 import { useState } from 'react'
 import '../css/Login.css'
+import { useNavigate } from 'react-router-dom'
 
 function LoginForm(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    function handleSubmit(e){
+   async function handleSubmit(e) {
         e.preventDefault();
-    }
+        
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok){
+            navigate('/profile')
+        } else {
+            setError(data.error || 'Something went wrong. Please try again.')
+        }
+   }
 
     return(
         <>
@@ -24,6 +41,7 @@ function LoginForm(){
                 <div className="form-group">
                     <input id="password"
                     placeholder="Password"
+                    type="password"
                     onChange={(e) => setPassword(e.target.value)}/>
                 </div>
 
@@ -31,7 +49,11 @@ function LoginForm(){
                     <button type="submit" id="submitBtn">Log In</button>
                 </div>
             </form>
-            </div>
+            
+           <div>
+                {error &&<p className="error-message">{error}</p> } 
+            </div> 
+        </div> 
         </>
     )
 }
