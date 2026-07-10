@@ -1,5 +1,10 @@
 *{
+    font-family:'Courier New', Courier, monospace ;
     box-sizing: border-box;
+}
+
+h2{
+    font-size: 5vh;
 }
 
 .main{
@@ -13,7 +18,7 @@
 
 .login-form{
     min-width: 25vw;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .form-group{
@@ -22,13 +27,12 @@
     justify-content: center;
     padding: 5px;
     font-size: 2rem;
-    margin-bottom: 5vh;
-    gap: 1vw;
+    margin-bottom: 4vh;
 }
 
 input {
-    border: 3px solid black;
-    border-radius: 15px;
+    border: none;
+    background-color: hsl(240, 5%, 20%);
     height: 6vh;
     width: 20vw;
     padding: 10px 12px;
@@ -41,24 +45,21 @@ input::placeholder{
 }
 
 #submitBtn{
-    border: 3px solid black;
-    border-radius: 20px;
+    border: none;
     height: 6vh;
     width: 20vw;
     padding: 10px 12px;
-    background-color: hsl(100, 80%, 35%);
+    background-color: hsl(286, 95%, 60%);
     font-size: 1rem;
+    color: black;
 }
 
 #submitBtn:hover{
     cursor: pointer;
-    background-color: hsl(100, 100%, 15%);
+    color: white;
+    background-color: hsl(286, 60%, 30%);
 }
 
 .error-message{
-    color: red;
-}
-
-.success-message{
-    color: green;
+    color: hsl(0, 70%, 60%);
 }

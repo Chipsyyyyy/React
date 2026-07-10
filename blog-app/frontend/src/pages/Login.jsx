@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../css/Login.css'
+import '../css/AuthForm.css'
 import { useNavigate } from 'react-router-dom'
 
 function LoginForm(){
@@ -11,7 +11,7 @@ function LoginForm(){
    async function handleSubmit(e) {
         e.preventDefault();
         
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
