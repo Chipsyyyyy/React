@@ -5,6 +5,7 @@
 
 h2{
     font-size: 5vh;
+    margin-bottom: 2vh;
 }
 
 .main{
@@ -16,7 +17,7 @@ h2{
     background-color: hsl(240, 5%, 15%);
 }
 
-.login-form{
+.auth-form{
     min-width: 25vw;
     padding: 1.5rem;
 }
@@ -58,6 +59,11 @@ input::placeholder{
     cursor: pointer;
     color: white;
     background-color: hsl(286, 60%, 30%);
+}
+
+.auth-switch-link{
+    font-size: 1rem;
+    color: white;
 }
 
 .error-message{

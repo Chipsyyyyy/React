@@ -20,9 +20,9 @@ db.prepare(`
     )
     `).run();
 
-    // db.prepare(`
-    //     DELETE FROM users
-    //     `).run()
+// db.prepare(`
+//     DELETE FROM users
+//     `).run()
 
 // createTestUser();
 
